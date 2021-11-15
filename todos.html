@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>To Do Apps | Home :: Workshop Front End Web Development</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="http://fonts.googleapis.com/css?family=Karla" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/magnific-popup.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="./css/todos.css" />
+    <!-- jQuery -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <!-- Add fancyBox main JS and CSS files -->
+    <script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
+    <script type="text/javascript" src="./js/todos.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Todo App</h1>
+      <form class="todo-form">
+        <input type="text" class="todo-input" placeholder="Add a Todo..." />
+        <button type="submit" class="add-button">Add</button>
+      </form>
+      <ul class="todo-items"></ul>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        $(".popup-with-zoom-anim").magnificPopup({
+          type: "inline",
+          fixedContentPos: false,
+          fixedBgPos: true,
+          overflowY: "auto",
+          closeBtnInside: true,
+          preloader: false,
+          midClick: true,
+          removalDelay: 300,
+          mainClass: "my-mfp-zoom-in",
+        });
+      });
+    </script>
+  </body>
+</html>
